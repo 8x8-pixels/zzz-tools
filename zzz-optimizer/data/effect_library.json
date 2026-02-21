@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "effects": [
+    {
+      "id": "ride_the_current",
+      "label": "ride-the-current",
+      "target": "team",
+      "enabledByDefault": false,
+      "mods": [
+        {
+          "key": "atk_pct_bonus",
+          "op": "add",
+          "value": 0.15
+        },
+        {
+          "key": "def_down",
+          "op": "add",
+          "value": 0.15
+        },
+        {
+          "key": "element_dmg_bonus",
+          "op": "add",
+          "value": 0.2,
+          "element": "physical"
+        },
+        {
+          "key": "crit_dmg",
+          "op": "add",
+          "value": 0.4
+        }
+      ],
+      "condition": {
+        "mode": "toggle"
+      }
+    }
+  ]
+}

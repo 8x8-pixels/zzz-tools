@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# 仮想環境
+.venv/
+venv/
+env/
+.env
+
+# 配布・ビルド
+dist/
+build/
+*.egg-info/
+
+# テスト・キャッシュ
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ツール出力ファイル群（生成物）
+result/
+result_live/
+debug/
+debug_frames/
+panels/
+
+# 動画ファイル
+mp4/
+*.mp4
+*.mov
+*.avi
+
+# ログ
+*.log
+ocr_debug.log
+
+# OS
+.DS_Store
+Thumbs.db

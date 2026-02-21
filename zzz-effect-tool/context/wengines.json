@@ -1,0 +1,118 @@
+{
+  "version": 1,
+  "wengines": [
+    {
+      "id": "shunguang-w",
+      "name": "瞬光餅",
+      "baseMods": [
+        {
+          "key": "atk_flat",
+          "op": "add",
+          "value": 743
+        },
+        {
+          "key": "crit_dmg",
+          "op": "add",
+          "value": 0.48
+        }
+      ],
+      "effects": [
+        {
+          "id": "effect",
+          "label": "effect",
+          "target": "mainDps",
+          "enabledByDefault": true,
+          "mods": [
+            {
+              "key": "res_down",
+              "op": "add",
+              "value": 0.2
+            },
+            {
+              "key": "dmg_bonus",
+              "op": "add",
+              "value": 0.25
+            },
+            {
+              "key": "crit_dmg",
+              "op": "add",
+              "value": 0.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sunna-w",
+      "name": "千夏餅",
+      "baseMods": [
+        {
+          "key": "atk_flat",
+          "op": "add",
+          "value": 713
+        },
+        {
+          "key": "energy_regen",
+          "op": "add",
+          "value": 0.6
+        }
+      ],
+      "effects": [
+        {
+          "id": "effect1",
+          "label": "effect1",
+          "target": "team",
+          "enabledByDefault": true,
+          "mods": [
+            {
+              "key": "crit_dmg",
+              "op": "add",
+              "value": 0.25
+            },
+            {
+              "key": "atk_pct_bonus",
+              "op": "add",
+              "value": 0.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zhao-w",
+      "name": "照餅",
+      "baseMods": [
+        {
+          "key": "atk_flat",
+          "op": "add",
+          "value": 713
+        },
+        {
+          "key": "hp_pct_base",
+          "op": "add",
+          "value": 0.3
+        }
+      ],
+      "effects": [
+        {
+          "id": "effect1",
+          "label": "effect1",
+          "target": "team",
+          "enabledByDefault": true,
+          "mods": [
+            {
+              "key": "atk_pct_bonus",
+              "op": "add",
+              "value": 0.1
+            },
+            {
+              "key": "crit_dmg",
+              "op": "add",
+              "value": 0.3
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

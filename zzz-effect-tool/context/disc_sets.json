@@ -1,0 +1,204 @@
+{
+  "version": 1,
+  "discSets": [
+    {
+      "setId": "White Water Ballad",
+      "name": "White Water Ballad",
+      "effects2pc": [
+        {
+          "id": "white_water_ballad_2set",
+          "label": "white water ballad 2set",
+          "target": "mainDps",
+          "enabledByDefault": true,
+          "condition": {
+            "mode": "toggle"
+          },
+          "mods": [
+            {
+              "key": "atk_pct_base",
+              "op": "add",
+              "value": 0.1
+            }
+          ]
+        }
+      ],
+      "effects4pc": [
+        {
+          "id": "white_water_ballad_4set",
+          "label": "white water ballad 4set",
+          "target": "mainDps",
+          "enabledByDefault": false,
+          "condition": {
+            "mode": "toggle"
+          },
+          "mods": [
+            {
+              "key": "atk_pct_bonus",
+              "op": "add",
+              "value": 0.1
+            },
+            {
+              "key": "crit_rate",
+              "op": "add",
+              "value": 0.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "setId": "Branch & Blade Song",
+      "name": "Branch & Blade Song",
+      "effects2pc": [
+        {
+          "id": "2set",
+          "label": "2set",
+          "target": "mainDps",
+          "enabledByDefault": true,
+          "mods": [
+            {
+              "key": "crit_dmg",
+              "op": "add",
+              "value": 0.16
+            }
+          ]
+        }
+      ],
+      "effects4pc": [
+        {
+          "id": "4set",
+          "label": "4set",
+          "target": "mainDps",
+          "enabledByDefault": false,
+          "condition": {
+            "mode": "toggle"
+          },
+          "mods": [
+            {
+              "key": "crit_dmg",
+              "op": "add",
+              "value": 0.3
+            },
+            {
+              "key": "crit_rate",
+              "op": "add",
+              "value": 0.12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "setId": "Astral Voice",
+      "name": "Astral Voice",
+      "effects2pc": [
+        {
+          "id": "2set",
+          "label": "2set",
+          "target": "mainDps",
+          "enabledByDefault": true,
+          "mods": [
+            {
+              "key": "atk_pct_base",
+              "op": "add",
+              "value": 0.1
+            }
+          ]
+        }
+      ],
+      "effects4pc": [
+        {
+          "id": "4set",
+          "label": "4set",
+          "target": "team",
+          "enabledByDefault": false,
+          "condition": {
+            "mode": "uptime",
+            "defaultUptime": 0.8
+          },
+          "mods": [
+            {
+              "key": "dmg_bonus",
+              "op": "add",
+              "value": 0.24
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "setId": "Moonlight Lullaby",
+      "name": "Moonlight Lullaby",
+      "effects2pc": [
+        {
+          "id": "2set",
+          "label": "2set",
+          "target": "mainDps",
+          "enabledByDefault": true,
+          "mods": [
+            {
+              "key": "energy_regen",
+              "op": "add",
+              "value": 0.2
+            }
+          ]
+        }
+      ],
+      "effects4pc": [
+        {
+          "id": "4set",
+          "label": "4set",
+          "target": "team",
+          "enabledByDefault": false,
+          "condition": {
+            "mode": "toggle"
+          },
+          "mods": [
+            {
+              "key": "dmg_bonus",
+              "op": "add",
+              "value": 0.18
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "setId": "Swing Jazz",
+      "name": "Swing Jazz",
+      "effects2pc": [
+        {
+          "id": "2set",
+          "label": "2set",
+          "target": "mainDps",
+          "enabledByDefault": true,
+          "mods": [
+            {
+              "key": "energy_regen",
+              "op": "add",
+              "value": 0.2
+            }
+          ]
+        }
+      ],
+      "effects4pc": [
+        {
+          "id": "4set",
+          "label": "4set",
+          "target": "team",
+          "enabledByDefault": false,
+          "condition": {
+            "mode": "toggle"
+          },
+          "mods": [
+            {
+              "key": "dmg_bonus",
+              "op": "add",
+              "value": 0.15
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

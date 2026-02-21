@@ -1,0 +1,244 @@
+{
+  "version": 1,
+  "characters": [
+    {
+      "id": "ye shunguang",
+      "name": "葉瞬光",
+      "element": "physical",
+      "class": "Attack",
+      "baseStats": {
+        "hp": 7673,
+        "atk": 938,
+        "def": 606,
+        "impact": 83,
+        "anomalyMastery": 94,
+        "anomalyProficiency": 93,
+        "critRate": 0.19399999999999998,
+        "critDmg": 0.5,
+        "adrenalineRegen": 0.012
+      },
+      "effects": [
+        {
+          "id": "core",
+          "label": "core",
+          "target": "mainDps",
+          "enabledByDefault": true,
+          "mods": [
+            {
+              "key": "crit_rate",
+              "op": "add",
+              "value": 0.3
+            },
+            {
+              "key": "dmg_bonus",
+              "op": "add",
+              "value": 0.25
+            }
+          ]
+        }
+      ],
+      "mindscape": {
+        "1": [
+          {
+            "id": "m1",
+            "label": "m1",
+            "target": "mainDps",
+            "enabledByDefault": true,
+            "mods": [
+              {
+                "key": "dmg_bonus",
+                "op": "add",
+                "value": 0.1
+              },
+              {
+                "key": "def_down",
+                "op": "add",
+                "value": 0.2
+              }
+            ]
+          }
+        ],
+        "2": [
+          {
+            "id": "m2",
+            "label": "m2",
+            "target": "mainDps",
+            "enabledByDefault": true,
+            "mods": [
+              {
+                "key": "def_down",
+                "op": "add",
+                "value": 0.4
+              }
+            ],
+            "condition": {
+              "mode": "toggle"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "sunna",
+      "name": "千夏",
+      "element": "physical",
+      "class": "Support",
+      "baseStats": {
+        "hp": 8477,
+        "atk": 907,
+        "def": 600,
+        "impact": 98,
+        "anomalyMastery": 96,
+        "anomalyProficiency": 95,
+        "critRate": 0.05,
+        "critDmg": 0.5
+      },
+      "effects": [
+        {
+          "id": "core",
+          "label": "core",
+          "target": "team",
+          "enabledByDefault": true,
+          "mods": [
+            {
+              "key": "atk_flat",
+              "op": "add",
+              "value": 1050
+            }
+          ]
+        },
+        {
+          "id": "add",
+          "label": "add",
+          "target": "enemy",
+          "enabledByDefault": true,
+          "mods": [
+            {
+              "key": "break_vuln",
+              "op": "add",
+              "value": 0.35
+            }
+          ]
+        }
+      ],
+      "mindscape": {
+        "1": [
+          {
+            "id": "m1",
+            "label": "m1",
+            "target": "enemy",
+            "enabledByDefault": true,
+            "mods": [
+              {
+                "key": "def_down",
+                "op": "add",
+                "value": 0.21
+              }
+            ],
+            "condition": {
+              "mode": "uptime",
+              "defaultUptime": 1
+            }
+          }
+        ],
+        "2": [
+          {
+            "id": "m2",
+            "label": "m2",
+            "target": "team",
+            "enabledByDefault": true,
+            "mods": [
+              {
+                "key": "atk_pct_bonus",
+                "op": "add",
+                "value": 0.1
+              }
+            ],
+            "condition": {
+              "mode": "toggle"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "zhao",
+      "name": "照",
+      "element": "ice",
+      "class": "Defense",
+      "baseStats": {
+        "hp": 10759,
+        "atk": 765,
+        "def": 701,
+        "impact": 93,
+        "anomalyMastery": 93,
+        "anomalyProficiency": 96,
+        "critRate": 0.05,
+        "critDmg": 0.5
+      },
+      "effects": [
+        {
+          "id": "core",
+          "label": "core",
+          "target": "team",
+          "enabledByDefault": true,
+          "mods": [
+            {
+              "key": "atk_flat",
+              "op": "add",
+              "value": 1000
+            }
+          ]
+        },
+        {
+          "id": "add",
+          "label": "add",
+          "target": "team",
+          "enabledByDefault": true,
+          "mods": [
+            {
+              "key": "dmg_bonus",
+              "op": "add",
+              "value": 0.4
+            }
+          ]
+        }
+      ],
+      "mindscape": {
+        "1": [
+          {
+            "id": "m1",
+            "label": "m1",
+            "target": "mainDps",
+            "enabledByDefault": true,
+            "mods": [
+              {
+                "key": "res_down",
+                "op": "add",
+                "value": 0.15
+              }
+            ]
+          }
+        ],
+        "2": [
+          {
+            "id": "m2",
+            "label": "m2",
+            "target": "team",
+            "enabledByDefault": false,
+            "mods": [
+              {
+                "key": "atk_pct_bonus",
+                "op": "add",
+                "value": 0.15
+              }
+            ],
+            "condition": {
+              "mode": "toggle"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
