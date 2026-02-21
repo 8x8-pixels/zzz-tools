@@ -32,7 +32,10 @@ cd zzz-disc-db
 pip install -r requirements.txt
 ```
 
-> Tesseract OCR のインストールも別途必要です。
+> **ゲーム設定の言語を英語にしてから実行してください。** OCR は英語テキストを前提としています。
+
+> Tesseract OCR のインストールも別途必要です。  
+> インストール時は **Add to PATH** にチェックを入れ、追加コンポーネントで **English** の言語データ（`eng`）が含まれていることを確認してください。
 
 **実行:**
 
