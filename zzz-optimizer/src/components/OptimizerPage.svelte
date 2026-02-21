@@ -54,6 +54,18 @@
   // 最適化対象
   let damageType: DamageType = 'normal';
 
+  // スロット6メインステ絞り込み
+  const slot6MainStatOptions: { label: string; value: StatKey | '' }[] = [
+    { label: '指定なし', value: '' },
+    { label: 'ATK%', value: 'atk_pct_base' },
+    { label: 'HP%', value: 'hp_pct_base' },
+    { label: 'DEF%', value: 'def_pct' },
+    { label: 'Energy Regen%', value: 'energy_regen' },
+    { label: 'Anomaly Mastery%', value: 'anomaly_mastery' },
+    { label: 'Impact%', value: 'impact' },
+  ];
+  let slot6MainStat: StatKey | '' = '';
+
   // 追加エフェクトのトグル
   let effectToggles: Record<string, boolean> = {};
   $: {
@@ -196,6 +208,7 @@
       atkToPenRatio,
       hpToPenRatio,
       mindscapeLevel,
+      slot6MainStat: slot6MainStat || null,
       supportChars: [supportConfig1, supportConfig2].filter(
         (c): c is SupportCharConfig => c !== null
       ),
@@ -408,6 +421,14 @@
         <label><input type="radio" bind:group={damageType} value="normal" /> 通常ダメージ</label>
         <label><input type="radio" bind:group={damageType} value="anomaly" /> 異常ダメージ</label>
         <label><input type="radio" bind:group={damageType} value="penetration" /> 透徹ダメージ</label>
+        <div class="param-row" style="margin-top: 0.5rem;">
+          <span>6番メインステ:</span>
+          <select bind:value={slot6MainStat}>
+            {#each slot6MainStatOptions as opt}
+              <option value={opt.value}>{opt.label}</option>
+            {/each}
+          </select>
+        </div>
       </section>
 
       <!-- ディスクファイル読み込み -->

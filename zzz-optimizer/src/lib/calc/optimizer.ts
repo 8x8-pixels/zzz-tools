@@ -118,7 +118,10 @@ export function optimize(
     let valid = true;
     for (let slot = 1; slot <= 6; slot++) {
       const setId = assignment[slot - 1];
-      const candidates = discsBySetAndSlot.get(setId)?.get(slot) ?? [];
+      let candidates = discsBySetAndSlot.get(setId)?.get(slot) ?? [];
+      if (slot === 6 && config.slot6MainStat) {
+        candidates = candidates.filter((d) => d.main_stat.stat_key === config.slot6MainStat);
+      }
       if (candidates.length === 0) {
         valid = false;
         break;

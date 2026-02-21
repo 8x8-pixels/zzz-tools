@@ -227,6 +227,8 @@ export interface OptimizerConfig {
   mindscapeLevel?: number;
   /** 編成サポートキャラクター（最大2体）*/
   supportChars: SupportCharConfig[];
+  /** スロット6のメインステ絞り込み（未指定時は全候補を対象）*/
+  slot6MainStat?: StatKey | null;
 }
 
 // ─────────────────────────────────────────────
