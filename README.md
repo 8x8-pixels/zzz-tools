@@ -2,6 +2,8 @@
 
 ゼンレスゾーンゼロ（ZZZ）向けのツール群です。  
 ディスクデータの収集・エフェクト定義の作成・ダメージ最適化を、3つのツールで分担しています。
+ダメ計周りはこちらを参照しています
+https://github.com/zzz-tools/cd-status-optimizer
 
 ```
 zzz-tools/
@@ -161,4 +163,5 @@ data/discs/
 
 質問などは X（Twitter）までお気軽にどうぞ。  
 [@we4ves_g4mes](https://x.com/we4ves_g4mes)
+
 
