@@ -1,0 +1,31 @@
+# Node / frontend
+node_modules/
+dist/
+.vite/
+
+# Python environments / caches
+.venv/
+**/.venv/
+__pycache__/
+*.py[cod]
+
+# Tauri / Rust build artifacts
+src-tauri/target/
+src-tauri/gen/
+
+# OCR runtime outputs (can trigger tauri:dev rebuild loops if under src-tauri)
+src-tauri/result_live/
+result_live/
+**/result_live/
+
+# Sidecar build artifacts
+sidecar/disc_capture/build/
+sidecar/disc_capture/dist/
+sidecar/disc_capture-*.exe
+
+# Logs
+*.log
+
+# OS junk
+Thumbs.db
+.DS_Store

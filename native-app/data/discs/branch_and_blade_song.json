@@ -1,0 +1,1827 @@
+[
+  {
+    "name": "Branch & Blade Song",
+    "slot": 1,
+    "level": 15,
+    "rarity": "S",
+    "id": 0,
+    "main_stat": {
+      "stat_key": "hp_flat",
+      "value": 2200.0
+    },
+    "sub_stats": [
+      {
+        "stat_key": "crit_dmg",
+        "value": 0.048,
+        "rolls": 0
+      },
+      {
+        "stat_key": "atk_pct_base",
+        "value": 0.03,
+        "rolls": 0
+      },
+      {
+        "stat_key": "anomaly_proficiency",
+        "value": 36.0,
+        "rolls": 3
+      },
+      {
+        "stat_key": "crit_rate",
+        "value": 0.048,
+        "rolls": 1
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 1,
+    "level": 15,
+    "rarity": "S",
+    "id": 1,
+    "main_stat": {
+      "stat_key": "hp_flat",
+      "value": 2200.0
+    },
+    "sub_stats": [
+      {
+        "stat_key": "atk_pct_base",
+        "value": 0.06,
+        "rolls": 1
+      },
+      {
+        "stat_key": "crit_dmg",
+        "value": 0.048,
+        "rolls": 0
+      },
+      {
+        "stat_key": "crit_rate",
+        "value": 0.012,
+        "rolls": 2
+      },
+      {
+        "stat_key": "hp_pct_base",
+        "value": 0.06,
+        "rolls": 1
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 1,
+    "level": 15,
+    "rarity": "S",
+    "id": 2,
+    "main_stat": {
+      "stat_key": "hp_flat",
+      "value": 2200.0
+    },
+    "sub_stats": [
+      {
+        "stat_key": "crit_rate",
+        "value": 0.07200000000000001,
+        "rolls": 2
+      },
+      {
+        "stat_key": "atk_flat",
+        "value": 38.0,
+        "rolls": 1
+      },
+      {
+        "stat_key": "anomaly_proficiency",
+        "value": 9.0,
+        "rolls": 0
+      },
+      {
+        "stat_key": "crit_dmg",
+        "value": 0.096,
+        "rolls": 1
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 1,
+    "level": 15,
+    "rarity": "S",
+    "id": 3,
+    "main_stat": {
+      "stat_key": "hp_flat",
+      "value": 2200.0
+    },
+    "sub_stats": [
+      {
+        "stat_key": "atk_pct_base",
+        "value": 0.12,
+        "rolls": 3
+      },
+      {
+        "stat_key": "crit_rate",
+        "value": 0.048,
+        "rolls": 1
+      },
+      {
+        "stat_key": "anomaly_proficiency",
+        "value": 9.0,
+        "rolls": 0
+      },
+      {
+        "stat_key": "atk_flat",
+        "value": 19.0,
+        "rolls": 0
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 1,
+    "level": 15,
+    "rarity": "S",
+    "id": 4,
+    "main_stat": {
+      "stat_key": "hp_flat",
+      "value": 2200.0
+    },
+    "sub_stats": [
+      {
+        "stat_key": "crit_dmg",
+        "value": 0.14400000000000002,
+        "rolls": 2
+      },
+      {
+        "stat_key": "crit_rate",
+        "value": 0.048,
+        "rolls": 1
+      },
+      {
+        "stat_key": "def_flat",
+        "value": 30.0,
+        "rolls": 1
+      },
+      {
+        "stat_key": "hp_pct_base",
+        "value": 0.03,
+        "rolls": 0
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 1,
+    "level": 15,
+    "rarity": "S",
+    "id": 5,
+    "main_stat": {
+      "stat_key": "hp_flat",
+      "value": 2200.0
+    },
+    "sub_stats": [
+      {
+        "stat_key": "atk_flat",
+        "value": 38.0,
+        "rolls": 1
+      },
+      {
+        "stat_key": "crit_rate",
+        "value": 0.012,
+        "rolls": 2
+      },
+      {
+        "stat_key": "hp_pct_base",
+        "value": 0.06,
+        "rolls": 1
+      },
+      {
+        "stat_key": "crit_dmg",
+        "value": 0.096,
+        "rolls": 1
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 2,
+    "level": 15,
+    "rarity": "S",
+    "id": 6,
+    "main_stat": {
+      "stat_key": "atk_flat",
+      "value": 316.0
+    },
+    "sub_stats": [
+      {
+        "stat_key": "hp_pct_base",
+        "value": 0.06,
+        "rolls": 1
+      },
+      {
+        "stat_key": "anomaly_proficiency",
+        "value": 9.0,
+        "rolls": 0
+      },
+      {
+        "stat_key": "crit_rate",
+        "value": 0.012,
+        "rolls": 2
+      },
+      {
+        "stat_key": "crit_dmg",
+        "value": 0.096,
+        "rolls": 1
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 2,
+    "level": 15,
+    "rarity": "S",
+    "id": 7,
+    "main_stat": {
+      "stat_key": "atk_flat",
+      "value": 316.0
+    },
+    "sub_stats": [
+      {
+        "stat_key": "def_flat",
+        "value": 15.0,
+        "rolls": 0
+      },
+      {
+        "stat_key": "crit_rate",
+        "value": 0.048,
+        "rolls": 1
+      },
+      {
+        "stat_key": "crit_dmg",
+        "value": 0.14400000000000002,
+        "rolls": 2
+      },
+      {
+        "stat_key": "def_pct",
+        "value": 0.096,
+        "rolls": 1
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 2,
+    "level": 15,
+    "rarity": "S",
+    "id": 8,
+    "main_stat": {
+      "stat_key": "atk_flat",
+      "value": 316.0
+    },
+    "sub_stats": [
+      {
+        "stat_key": "crit_dmg",
+        "value": 0.096,
+        "rolls": 1
+      },
+      {
+        "stat_key": "pen_flat",
+        "value": 18.0,
+        "rolls": 1
+      },
+      {
+        "stat_key": "atk_pct_base",
+        "value": 0.09,
+        "rolls": 2
+      },
+      {
+        "stat_key": "def_flat",
+        "value": 15.0,
+        "rolls": 0
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 2,
+    "level": 15,
+    "rarity": "S",
+    "id": 9,
+    "main_stat": {
+      "stat_key": "atk_flat",
+      "value": 316.0
+    },
+    "sub_stats": [
+      {
+        "stat_key": "crit_dmg",
+        "value": 0.096,
+        "rolls": 1
+      },
+      {
+        "stat_key": "hp_flat",
+        "value": 224.0,
+        "rolls": 1
+      },
+      {
+        "stat_key": "hp_pct_base",
+        "value": 0.06,
+        "rolls": 1
+      },
+      {
+        "stat_key": "atk_pct_base",
+        "value": 0.09,
+        "rolls": 2
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 2,
+    "level": 15,
+    "rarity": "S",
+    "id": 10,
+    "main_stat": {
+      "stat_key": "atk_flat",
+      "value": 316.0
+    },
+    "sub_stats": [
+      {
+        "stat_key": "atk_pct_base",
+        "value": 0.06,
+        "rolls": 1
+      },
+      {
+        "stat_key": "def_pct",
+        "value": 0.096,
+        "rolls": 1
+      },
+      {
+        "stat_key": "crit_rate",
+        "value": 0.012,
+        "rolls": 2
+      },
+      {
+        "stat_key": "anomaly_proficiency",
+        "value": 18.0,
+        "rolls": 1
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 2,
+    "level": 15,
+    "rarity": "S",
+    "id": 11,
+    "main_stat": {
+      "stat_key": "atk_flat",
+      "value": 316.0
+    },
+    "sub_stats": [
+      {
+        "stat_key": "anomaly_proficiency",
+        "value": 36.0,
+        "rolls": 3
+      },
+      {
+        "stat_key": "crit_rate",
+        "value": 0.048,
+        "rolls": 1
+      },
+      {
+        "stat_key": "def_pct",
+        "value": 0.096,
+        "rolls": 1
+      },
+      {
+        "stat_key": "atk_pct_base",
+        "value": 0.03,
+        "rolls": 0
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 2,
+    "level": 15,
+    "rarity": "S",
+    "id": 12,
+    "main_stat": {
+      "stat_key": "atk_flat",
+      "value": 316.0
+    },
+    "sub_stats": [
+      {
+        "stat_key": "crit_rate",
+        "value": 0.024,
+        "rolls": 0
+      },
+      {
+        "stat_key": "atk_pct_base",
+        "value": 0.12,
+        "rolls": 3
+      },
+      {
+        "stat_key": "crit_dmg",
+        "value": 0.048,
+        "rolls": 0
+      },
+      {
+        "stat_key": "hp_pct_base",
+        "value": 0.06,
+        "rolls": 1
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 3,
+    "level": 15,
+    "rarity": "S",
+    "id": 13,
+    "main_stat": {
+      "stat_key": "def_flat",
+      "value": 184.0
+    },
+    "sub_stats": [
+      {
+        "stat_key": "def_pct",
+        "value": 0.048,
+        "rolls": 0
+      },
+      {
+        "stat_key": "crit_dmg",
+        "value": 0.14400000000000002,
+        "rolls": 2
+      },
+      {
+        "stat_key": "hp_pct_base",
+        "value": 0.06,
+        "rolls": 1
+      },
+      {
+        "stat_key": "crit_rate",
+        "value": 0.048,
+        "rolls": 1
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 3,
+    "level": 15,
+    "rarity": "S",
+    "id": 14,
+    "main_stat": {
+      "stat_key": "def_flat",
+      "value": 184.0
+    },
+    "sub_stats": [
+      {
+        "stat_key": "crit_dmg",
+        "value": 0.048,
+        "rolls": 0
+      },
+      {
+        "stat_key": "crit_rate",
+        "value": 0.048,
+        "rolls": 1
+      },
+      {
+        "stat_key": "hp_pct_base",
+        "value": 0.12,
+        "rolls": 3
+      },
+      {
+        "stat_key": "atk_pct_base",
+        "value": 0.03,
+        "rolls": 0
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 3,
+    "level": 15,
+    "rarity": "S",
+    "id": 15,
+    "main_stat": {
+      "stat_key": "def_flat",
+      "value": 184.0
+    },
+    "sub_stats": [
+      {
+        "stat_key": "crit_rate",
+        "value": 0.048,
+        "rolls": 1
+      },
+      {
+        "stat_key": "pen_flat",
+        "value": 18.0,
+        "rolls": 1
+      },
+      {
+        "stat_key": "crit_dmg",
+        "value": 0.14400000000000002,
+        "rolls": 2
+      },
+      {
+        "stat_key": "atk_pct_base",
+        "value": 0.03,
+        "rolls": 0
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 3,
+    "level": 15,
+    "rarity": "S",
+    "id": 16,
+    "main_stat": {
+      "stat_key": "def_flat",
+      "value": 184.0
+    },
+    "sub_stats": [
+      {
+        "stat_key": "crit_rate",
+        "value": 0.024,
+        "rolls": 0
+      },
+      {
+        "stat_key": "def_pct",
+        "value": 0.096,
+        "rolls": 1
+      },
+      {
+        "stat_key": "atk_pct_base",
+        "value": 0.06,
+        "rolls": 1
+      },
+      {
+        "stat_key": "crit_dmg",
+        "value": 0.14400000000000002,
+        "rolls": 2
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 3,
+    "level": 15,
+    "rarity": "S",
+    "id": 17,
+    "main_stat": {
+      "stat_key": "def_flat",
+      "value": 184.0
+    },
+    "sub_stats": [
+      {
+        "stat_key": "crit_rate",
+        "value": 0.096,
+        "rolls": 3
+      },
+      {
+        "stat_key": "pen_flat",
+        "value": 18.0,
+        "rolls": 1
+      },
+      {
+        "stat_key": "hp_flat",
+        "value": 112.0,
+        "rolls": 0
+      },
+      {
+        "stat_key": "crit_dmg",
+        "value": 0.048,
+        "rolls": 0
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 3,
+    "level": 15,
+    "rarity": "S",
+    "id": 18,
+    "main_stat": {
+      "stat_key": "def_flat",
+      "value": 184.0
+    },
+    "sub_stats": [
+      {
+        "stat_key": "crit_rate",
+        "value": 0.024,
+        "rolls": 0
+      },
+      {
+        "stat_key": "atk_pct_base",
+        "value": 0.09,
+        "rolls": 2
+      },
+      {
+        "stat_key": "def_pct",
+        "value": 0.048,
+        "rolls": 0
+      },
+      {
+        "stat_key": "anomaly_proficiency",
+        "value": 27.0,
+        "rolls": 2
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 3,
+    "level": 15,
+    "rarity": "S",
+    "id": 19,
+    "main_stat": {
+      "stat_key": "def_flat",
+      "value": 184.0
+    },
+    "sub_stats": [
+      {
+        "stat_key": "atk_pct_base",
+        "value": 0.09,
+        "rolls": 2
+      },
+      {
+        "stat_key": "crit_rate",
+        "value": 0.024,
+        "rolls": 0
+      },
+      {
+        "stat_key": "hp_pct_base",
+        "value": 0.03,
+        "rolls": 0
+      },
+      {
+        "stat_key": "anomaly_proficiency",
+        "value": 27.0,
+        "rolls": 2
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 3,
+    "level": 15,
+    "rarity": "S",
+    "id": 20,
+    "main_stat": {
+      "stat_key": "def_flat",
+      "value": 184.0
+    },
+    "sub_stats": [
+      {
+        "stat_key": "atk_flat",
+        "value": 38.0,
+        "rolls": 1
+      },
+      {
+        "stat_key": "crit_dmg",
+        "value": 0.048,
+        "rolls": 0
+      },
+      {
+        "stat_key": "crit_rate",
+        "value": 0.012,
+        "rolls": 2
+      },
+      {
+        "stat_key": "hp_pct_base",
+        "value": 0.09,
+        "rolls": 2
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 3,
+    "level": 15,
+    "rarity": "S",
+    "id": 21,
+    "main_stat": {
+      "stat_key": "def_flat",
+      "value": 184.0
+    },
+    "sub_stats": [
+      {
+        "stat_key": "crit_rate",
+        "value": 0.048,
+        "rolls": 1
+      },
+      {
+        "stat_key": "def_pct",
+        "value": 0.048,
+        "rolls": 0
+      },
+      {
+        "stat_key": "crit_dmg",
+        "value": 0.096,
+        "rolls": 1
+      },
+      {
+        "stat_key": "anomaly_proficiency",
+        "value": 27.0,
+        "rolls": 2
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 4,
+    "level": 15,
+    "rarity": "S",
+    "id": 22,
+    "main_stat": {
+      "stat_key": "crit_dmg",
+      "value": 0.48
+    },
+    "sub_stats": [
+      {
+        "stat_key": "crit_rate",
+        "value": 0.048,
+        "rolls": 1
+      },
+      {
+        "stat_key": "atk_pct_base",
+        "value": 0.06,
+        "rolls": 1
+      },
+      {
+        "stat_key": "def_flat",
+        "value": 45.0,
+        "rolls": 2
+      },
+      {
+        "stat_key": "atk_flat",
+        "value": 19.0,
+        "rolls": 0
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 4,
+    "level": 15,
+    "rarity": "S",
+    "id": 23,
+    "main_stat": {
+      "stat_key": "crit_rate",
+      "value": 0.24
+    },
+    "sub_stats": [
+      {
+        "stat_key": "atk_pct_base",
+        "value": 0.06,
+        "rolls": 1
+      },
+      {
+        "stat_key": "def_pct",
+        "value": 0.096,
+        "rolls": 1
+      },
+      {
+        "stat_key": "hp_pct_base",
+        "value": 0.06,
+        "rolls": 1
+      },
+      {
+        "stat_key": "crit_dmg",
+        "value": 0.096,
+        "rolls": 1
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 4,
+    "level": 15,
+    "rarity": "S",
+    "id": 24,
+    "main_stat": {
+      "stat_key": "atk_pct_base",
+      "value": 0.3
+    },
+    "sub_stats": [
+      {
+        "stat_key": "hp_pct_base",
+        "value": 0.06,
+        "rolls": 1
+      },
+      {
+        "stat_key": "anomaly_proficiency",
+        "value": 9.0,
+        "rolls": 0
+      },
+      {
+        "stat_key": "crit_dmg",
+        "value": 0.14400000000000002,
+        "rolls": 2
+      },
+      {
+        "stat_key": "crit_rate",
+        "value": 0.048,
+        "rolls": 1
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 4,
+    "level": 15,
+    "rarity": "S",
+    "id": 25,
+    "main_stat": {
+      "stat_key": "crit_dmg",
+      "value": 0.48
+    },
+    "sub_stats": [
+      {
+        "stat_key": "atk_pct_base",
+        "value": 0.06,
+        "rolls": 1
+      },
+      {
+        "stat_key": "hp_flat",
+        "value": 112.0,
+        "rolls": 0
+      },
+      {
+        "stat_key": "crit_rate",
+        "value": 0.096,
+        "rolls": 3
+      },
+      {
+        "stat_key": "hp_pct_base",
+        "value": 0.03,
+        "rolls": 0
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 4,
+    "level": 15,
+    "rarity": "S",
+    "id": 26,
+    "main_stat": {
+      "stat_key": "atk_pct_base",
+      "value": 0.3
+    },
+    "sub_stats": [
+      {
+        "stat_key": "hp_flat",
+        "value": 336.0,
+        "rolls": 2
+      },
+      {
+        "stat_key": "crit_dmg",
+        "value": 0.096,
+        "rolls": 1
+      },
+      {
+        "stat_key": "crit_rate",
+        "value": 0.048,
+        "rolls": 1
+      },
+      {
+        "stat_key": "def_pct",
+        "value": 0.048,
+        "rolls": 0
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 4,
+    "level": 15,
+    "rarity": "S",
+    "id": 27,
+    "main_stat": {
+      "stat_key": "atk_pct_base",
+      "value": 0.3
+    },
+    "sub_stats": [
+      {
+        "stat_key": "def_pct",
+        "value": 0.048,
+        "rolls": 0
+      },
+      {
+        "stat_key": "hp_pct_base",
+        "value": 0.06,
+        "rolls": 1
+      },
+      {
+        "stat_key": "crit_rate",
+        "value": 0.012,
+        "rolls": 2
+      },
+      {
+        "stat_key": "hp_flat",
+        "value": 224.0,
+        "rolls": 1
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 4,
+    "level": 15,
+    "rarity": "S",
+    "id": 28,
+    "main_stat": {
+      "stat_key": "anomaly_proficiency",
+      "value": 92.0
+    },
+    "sub_stats": [
+      {
+        "stat_key": "crit_dmg",
+        "value": 0.096,
+        "rolls": 1
+      },
+      {
+        "stat_key": "crit_rate",
+        "value": 0.012,
+        "rolls": 2
+      },
+      {
+        "stat_key": "atk_flat",
+        "value": 19.0,
+        "rolls": 0
+      },
+      {
+        "stat_key": "def_pct",
+        "value": 0.096,
+        "rolls": 1
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 5,
+    "level": 15,
+    "rarity": "S",
+    "id": 29,
+    "main_stat": {
+      "stat_key": "element_dmg_bonus",
+      "value": 0.3,
+      "element": "ice"
+    },
+    "sub_stats": [
+      {
+        "stat_key": "atk_flat",
+        "value": 38.0,
+        "rolls": 1
+      },
+      {
+        "stat_key": "crit_dmg",
+        "value": 0.048,
+        "rolls": 0
+      },
+      {
+        "stat_key": "atk_pct_base",
+        "value": 0.06,
+        "rolls": 1
+      },
+      {
+        "stat_key": "crit_rate",
+        "value": 0.012,
+        "rolls": 2
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 5,
+    "level": 15,
+    "rarity": "S",
+    "id": 30,
+    "main_stat": {
+      "stat_key": "pen_rate",
+      "value": 0.24
+    },
+    "sub_stats": [
+      {
+        "stat_key": "hp_pct_base",
+        "value": 0.03,
+        "rolls": 0
+      },
+      {
+        "stat_key": "crit_rate",
+        "value": 0.096,
+        "rolls": 3
+      },
+      {
+        "stat_key": "def_pct",
+        "value": 0.096,
+        "rolls": 1
+      },
+      {
+        "stat_key": "atk_pct_base",
+        "value": 0.03,
+        "rolls": 0
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 5,
+    "level": 15,
+    "rarity": "S",
+    "id": 31,
+    "main_stat": {
+      "stat_key": "atk_pct_base",
+      "value": 0.3
+    },
+    "sub_stats": [
+      {
+        "stat_key": "crit_dmg",
+        "value": 0.048,
+        "rolls": 0
+      },
+      {
+        "stat_key": "anomaly_proficiency",
+        "value": 18.0,
+        "rolls": 1
+      },
+      {
+        "stat_key": "def_flat",
+        "value": 30.0,
+        "rolls": 1
+      },
+      {
+        "stat_key": "crit_rate",
+        "value": 0.012,
+        "rolls": 2
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 5,
+    "level": 15,
+    "rarity": "S",
+    "id": 32,
+    "main_stat": {
+      "stat_key": "pen_rate",
+      "value": 0.24
+    },
+    "sub_stats": [
+      {
+        "stat_key": "anomaly_proficiency",
+        "value": 18.0,
+        "rolls": 1
+      },
+      {
+        "stat_key": "pen_flat",
+        "value": 27.0,
+        "rolls": 2
+      },
+      {
+        "stat_key": "crit_dmg",
+        "value": 0.14400000000000002,
+        "rolls": 2
+      },
+      {
+        "stat_key": "def_pct",
+        "value": 0.048,
+        "rolls": 0
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 5,
+    "level": 15,
+    "rarity": "S",
+    "id": 33,
+    "main_stat": {
+      "stat_key": "element_dmg_bonus",
+      "value": 0.3,
+      "element": "ice"
+    },
+    "sub_stats": [
+      {
+        "stat_key": "crit_rate",
+        "value": 0.048,
+        "rolls": 1
+      },
+      {
+        "stat_key": "atk_pct_base",
+        "value": 0.06,
+        "rolls": 1
+      },
+      {
+        "stat_key": "crit_dmg",
+        "value": 0.048,
+        "rolls": 0
+      },
+      {
+        "stat_key": "def_flat",
+        "value": 45.0,
+        "rolls": 2
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 5,
+    "level": 15,
+    "rarity": "S",
+    "id": 34,
+    "main_stat": {
+      "stat_key": "element_dmg_bonus",
+      "value": 0.3,
+      "element": "ether"
+    },
+    "sub_stats": [
+      {
+        "stat_key": "crit_rate",
+        "value": 0.048,
+        "rolls": 1
+      },
+      {
+        "stat_key": "def_pct",
+        "value": 0.048,
+        "rolls": 0
+      },
+      {
+        "stat_key": "hp_pct_base",
+        "value": 0.12,
+        "rolls": 3
+      },
+      {
+        "stat_key": "crit_dmg",
+        "value": 0.048,
+        "rolls": 0
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 5,
+    "level": 15,
+    "rarity": "S",
+    "id": 35,
+    "main_stat": {
+      "stat_key": "pen_rate",
+      "value": 0.24
+    },
+    "sub_stats": [
+      {
+        "stat_key": "crit_rate",
+        "value": 0.048,
+        "rolls": 1
+      },
+      {
+        "stat_key": "crit_dmg",
+        "value": 0.14400000000000002,
+        "rolls": 2
+      },
+      {
+        "stat_key": "anomaly_proficiency",
+        "value": 18.0,
+        "rolls": 1
+      },
+      {
+        "stat_key": "pen_flat",
+        "value": 9.0,
+        "rolls": 0
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 5,
+    "level": 15,
+    "rarity": "S",
+    "id": 36,
+    "main_stat": {
+      "stat_key": "element_dmg_bonus",
+      "value": 0.3,
+      "element": "fire"
+    },
+    "sub_stats": [
+      {
+        "stat_key": "def_flat",
+        "value": 45.0,
+        "rolls": 2
+      },
+      {
+        "stat_key": "crit_dmg",
+        "value": 0.096,
+        "rolls": 1
+      },
+      {
+        "stat_key": "pen_flat",
+        "value": 18.0,
+        "rolls": 1
+      },
+      {
+        "stat_key": "crit_rate",
+        "value": 0.024,
+        "rolls": 0
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 5,
+    "level": 15,
+    "rarity": "S",
+    "id": 37,
+    "main_stat": {
+      "stat_key": "element_dmg_bonus",
+      "value": 0.3,
+      "element": "ice"
+    },
+    "sub_stats": [
+      {
+        "stat_key": "crit_dmg",
+        "value": 0.096,
+        "rolls": 1
+      },
+      {
+        "stat_key": "pen_flat",
+        "value": 18.0,
+        "rolls": 1
+      },
+      {
+        "stat_key": "hp_flat",
+        "value": 224.0,
+        "rolls": 1
+      },
+      {
+        "stat_key": "hp_pct_base",
+        "value": 0.06,
+        "rolls": 1
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 5,
+    "level": 15,
+    "rarity": "S",
+    "id": 38,
+    "main_stat": {
+      "stat_key": "element_dmg_bonus",
+      "value": 0.3,
+      "element": "ice"
+    },
+    "sub_stats": [
+      {
+        "stat_key": "def_pct",
+        "value": 0.096,
+        "rolls": 1
+      },
+      {
+        "stat_key": "crit_rate",
+        "value": 0.048,
+        "rolls": 1
+      },
+      {
+        "stat_key": "hp_pct_base",
+        "value": 0.06,
+        "rolls": 1
+      },
+      {
+        "stat_key": "atk_flat",
+        "value": 38.0,
+        "rolls": 1
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 5,
+    "level": 15,
+    "rarity": "S",
+    "id": 39,
+    "main_stat": {
+      "stat_key": "element_dmg_bonus",
+      "value": 0.3,
+      "element": "physical"
+    },
+    "sub_stats": [
+      {
+        "stat_key": "crit_dmg",
+        "value": 0.048,
+        "rolls": 0
+      },
+      {
+        "stat_key": "def_pct",
+        "value": 0.14400000000000002,
+        "rolls": 2
+      },
+      {
+        "stat_key": "crit_rate",
+        "value": 0.024,
+        "rolls": 0
+      },
+      {
+        "stat_key": "def_flat",
+        "value": 45.0,
+        "rolls": 2
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 5,
+    "level": 15,
+    "rarity": "S",
+    "id": 40,
+    "main_stat": {
+      "stat_key": "pen_rate",
+      "value": 0.24
+    },
+    "sub_stats": [
+      {
+        "stat_key": "def_flat",
+        "value": 30.0,
+        "rolls": 1
+      },
+      {
+        "stat_key": "hp_pct_base",
+        "value": 0.03,
+        "rolls": 0
+      },
+      {
+        "stat_key": "crit_rate",
+        "value": 0.012,
+        "rolls": 2
+      },
+      {
+        "stat_key": "atk_pct_base",
+        "value": 0.06,
+        "rolls": 1
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 5,
+    "level": 15,
+    "rarity": "S",
+    "id": 41,
+    "main_stat": {
+      "stat_key": "element_dmg_bonus",
+      "value": 0.3,
+      "element": "ether"
+    },
+    "sub_stats": [
+      {
+        "stat_key": "atk_pct_base",
+        "value": 0.09,
+        "rolls": 2
+      },
+      {
+        "stat_key": "atk_flat",
+        "value": 19.0,
+        "rolls": 0
+      },
+      {
+        "stat_key": "hp_flat",
+        "value": 336.0,
+        "rolls": 2
+      },
+      {
+        "stat_key": "hp_pct_base",
+        "value": 0.03,
+        "rolls": 0
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 5,
+    "level": 15,
+    "rarity": "S",
+    "id": 42,
+    "main_stat": {
+      "stat_key": "element_dmg_bonus",
+      "value": 0.3,
+      "element": "ice"
+    },
+    "sub_stats": [
+      {
+        "stat_key": "crit_rate",
+        "value": 0.07200000000000001,
+        "rolls": 2
+      },
+      {
+        "stat_key": "hp_flat",
+        "value": 112.0,
+        "rolls": 0
+      },
+      {
+        "stat_key": "atk_flat",
+        "value": 57.0,
+        "rolls": 2
+      },
+      {
+        "stat_key": "atk_pct_base",
+        "value": 0.03,
+        "rolls": 0
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 5,
+    "level": 15,
+    "rarity": "S",
+    "id": 43,
+    "main_stat": {
+      "stat_key": "element_dmg_bonus",
+      "value": 0.3,
+      "element": "physical"
+    },
+    "sub_stats": [
+      {
+        "stat_key": "crit_rate",
+        "value": 0.024,
+        "rolls": 0
+      },
+      {
+        "stat_key": "crit_dmg",
+        "value": 0.048,
+        "rolls": 0
+      },
+      {
+        "stat_key": "hp_pct_base",
+        "value": 0.09,
+        "rolls": 2
+      },
+      {
+        "stat_key": "hp_flat",
+        "value": 336.0,
+        "rolls": 2
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 6,
+    "level": 15,
+    "rarity": "S",
+    "id": 44,
+    "main_stat": {
+      "stat_key": "anomaly_mastery",
+      "value": 0.3
+    },
+    "sub_stats": [
+      {
+        "stat_key": "atk_pct_base",
+        "value": 0.03,
+        "rolls": 0
+      },
+      {
+        "stat_key": "crit_rate",
+        "value": 0.048,
+        "rolls": 1
+      },
+      {
+        "stat_key": "crit_dmg",
+        "value": 0.096,
+        "rolls": 1
+      },
+      {
+        "stat_key": "def_pct",
+        "value": 0.14400000000000002,
+        "rolls": 2
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 6,
+    "level": 15,
+    "rarity": "S",
+    "id": 45,
+    "main_stat": {
+      "stat_key": "atk_pct_base",
+      "value": 0.3
+    },
+    "sub_stats": [
+      {
+        "stat_key": "crit_dmg",
+        "value": 0.14400000000000002,
+        "rolls": 2
+      },
+      {
+        "stat_key": "atk_flat",
+        "value": 38.0,
+        "rolls": 1
+      },
+      {
+        "stat_key": "anomaly_proficiency",
+        "value": 18.0,
+        "rolls": 1
+      },
+      {
+        "stat_key": "crit_rate",
+        "value": 0.024,
+        "rolls": 0
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 6,
+    "level": 15,
+    "rarity": "S",
+    "id": 46,
+    "main_stat": {
+      "stat_key": "hp_pct_base",
+      "value": 0.3
+    },
+    "sub_stats": [
+      {
+        "stat_key": "crit_dmg",
+        "value": 0.14400000000000002,
+        "rolls": 2
+      },
+      {
+        "stat_key": "hp_flat",
+        "value": 112.0,
+        "rolls": 0
+      },
+      {
+        "stat_key": "def_pct",
+        "value": 0.048,
+        "rolls": 0
+      },
+      {
+        "stat_key": "pen_flat",
+        "value": 27.0,
+        "rolls": 2
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 6,
+    "level": 15,
+    "rarity": "S",
+    "id": 47,
+    "main_stat": {
+      "stat_key": "energy_regen",
+      "value": 0.6
+    },
+    "sub_stats": [
+      {
+        "stat_key": "atk_pct_base",
+        "value": 0.06,
+        "rolls": 1
+      },
+      {
+        "stat_key": "crit_rate",
+        "value": 0.048,
+        "rolls": 1
+      },
+      {
+        "stat_key": "def_pct",
+        "value": 0.096,
+        "rolls": 1
+      },
+      {
+        "stat_key": "anomaly_proficiency",
+        "value": 27.0,
+        "rolls": 2
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 6,
+    "level": 15,
+    "rarity": "S",
+    "id": 48,
+    "main_stat": {
+      "stat_key": "energy_regen",
+      "value": 0.6
+    },
+    "sub_stats": [
+      {
+        "stat_key": "crit_rate",
+        "value": 0.048,
+        "rolls": 1
+      },
+      {
+        "stat_key": "anomaly_proficiency",
+        "value": 9.0,
+        "rolls": 0
+      },
+      {
+        "stat_key": "atk_flat",
+        "value": 38.0,
+        "rolls": 1
+      },
+      {
+        "stat_key": "atk_pct_base",
+        "value": 0.09,
+        "rolls": 2
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 6,
+    "level": 15,
+    "rarity": "S",
+    "id": 49,
+    "main_stat": {
+      "stat_key": "energy_regen",
+      "value": 0.6
+    },
+    "sub_stats": [
+      {
+        "stat_key": "atk_pct_base",
+        "value": 0.09,
+        "rolls": 2
+      },
+      {
+        "stat_key": "pen_flat",
+        "value": 9.0,
+        "rolls": 0
+      },
+      {
+        "stat_key": "atk_flat",
+        "value": 57.0,
+        "rolls": 2
+      },
+      {
+        "stat_key": "crit_rate",
+        "value": 0.048,
+        "rolls": 1
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 6,
+    "level": 15,
+    "rarity": "S",
+    "id": 50,
+    "main_stat": {
+      "stat_key": "anomaly_mastery",
+      "value": 0.3
+    },
+    "sub_stats": [
+      {
+        "stat_key": "crit_dmg",
+        "value": 0.14400000000000002,
+        "rolls": 2
+      },
+      {
+        "stat_key": "crit_rate",
+        "value": 0.048,
+        "rolls": 1
+      },
+      {
+        "stat_key": "def_pct",
+        "value": 0.048,
+        "rolls": 0
+      },
+      {
+        "stat_key": "atk_flat",
+        "value": 38.0,
+        "rolls": 1
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 6,
+    "level": 15,
+    "rarity": "S",
+    "id": 51,
+    "main_stat": {
+      "stat_key": "energy_regen",
+      "value": 0.6
+    },
+    "sub_stats": [
+      {
+        "stat_key": "atk_flat",
+        "value": 38.0,
+        "rolls": 1
+      },
+      {
+        "stat_key": "crit_dmg",
+        "value": 0.048,
+        "rolls": 0
+      },
+      {
+        "stat_key": "hp_pct_base",
+        "value": 0.09,
+        "rolls": 2
+      },
+      {
+        "stat_key": "crit_rate",
+        "value": 0.012,
+        "rolls": 2
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 6,
+    "level": 15,
+    "rarity": "S",
+    "id": 52,
+    "main_stat": {
+      "stat_key": "anomaly_mastery",
+      "value": 0.3
+    },
+    "sub_stats": [
+      {
+        "stat_key": "crit_dmg",
+        "value": 0.048,
+        "rolls": 0
+      },
+      {
+        "stat_key": "crit_rate",
+        "value": 0.096,
+        "rolls": 3
+      },
+      {
+        "stat_key": "def_pct",
+        "value": 0.096,
+        "rolls": 1
+      },
+      {
+        "stat_key": "pen_flat",
+        "value": 9.0,
+        "rolls": 0
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 6,
+    "level": 15,
+    "rarity": "S",
+    "id": 53,
+    "main_stat": {
+      "stat_key": "impact",
+      "value": 0.18
+    },
+    "sub_stats": [
+      {
+        "stat_key": "crit_rate",
+        "value": 0.024,
+        "rolls": 0
+      },
+      {
+        "stat_key": "crit_dmg",
+        "value": 0.14400000000000002,
+        "rolls": 2
+      },
+      {
+        "stat_key": "def_flat",
+        "value": 30.0,
+        "rolls": 1
+      },
+      {
+        "stat_key": "hp_pct_base",
+        "value": 0.06,
+        "rolls": 1
+      }
+    ]
+  },
+  {
+    "name": "Branch & Blade Song",
+    "slot": 6,
+    "level": 15,
+    "rarity": "S",
+    "id": 54,
+    "main_stat": {
+      "stat_key": "energy_regen",
+      "value": 0.6
+    },
+    "sub_stats": [
+      {
+        "stat_key": "crit_dmg",
+        "value": 0.048,
+        "rolls": 0
+      },
+      {
+        "stat_key": "crit_rate",
+        "value": 0.048,
+        "rolls": 1
+      },
+      {
+        "stat_key": "anomaly_proficiency",
+        "value": 27.0,
+        "rolls": 2
+      },
+      {
+        "stat_key": "atk_pct_base",
+        "value": 0.06,
+        "rolls": 1
+      }
+    ]
+  }
+]

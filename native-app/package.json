@@ -1,0 +1,31 @@
+{
+  "name": "native-app",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "tauri": "tauri",
+    "tauri:dev": "tauri dev",
+    "tauri:build": "tauri build",
+    "check": "svelte-check --tsconfig ./tsconfig.app.json && tsc -p tsconfig.node.json"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.0.0",
+    "@tauri-apps/plugin-dialog": "^2.0.0",
+    "@tauri-apps/plugin-fs": "^2.0.0",
+    "@tauri-apps/plugin-shell": "^2.0.0"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^6.2.1",
+    "@tauri-apps/cli": "^2.0.0",
+    "@tsconfig/svelte": "^5.0.6",
+    "@types/node": "^24.10.1",
+    "svelte": "^5.45.2",
+    "svelte-check": "^4.3.4",
+    "typescript": "~5.9.3",
+    "vite": "^7.3.1"
+  }
+}

@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ── CSS Variables (Dark Theme) ────────────────────── */
+
+:root {
+  /* Backgrounds */
+  --bg:              #0d0f14;
+  --surface-1:       #151820;
+  --surface-2:       #1b1f2a;
+  --surface-3:       #232836;
+
+  /* Text */
+  --text:            #e8eaf0;
+  --text-secondary:  #9ca3b4;
+  --text-muted:      #5e6577;
+
+  /* Borders */
+  --border:          #2a2f3e;
+  --border-hover:    #3a4058;
+
+  /* Accent */
+  --accent:          #6c8aff;
+  --accent-hover:    #8da4ff;
+  --accent-surface:  rgba(108, 138, 255, 0.10);
+
+  /* Danger */
+  --danger:          #ff6b6b;
+  --danger-surface:  rgba(255, 107, 107, 0.10);
+
+  /* Success */
+  --success:         #6bdc9e;
+  --success-surface: rgba(107, 220, 158, 0.10);
+
+  /* Misc */
+  --radius-sm:  6px;
+  --radius-md:  10px;
+  --radius-lg:  14px;
+  --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.25);
+  --transition: 0.15s ease;
+
+  /* Font */
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: dark;
+  color: var(--text);
+  background-color: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Reset ─────────────────────────────────────────── */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+#app {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Global form elements ──────────────────────────── */
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input, select, textarea {
+  font-family: inherit;
+}
+
+select {
+  cursor: pointer;
+}
+
+/* Focus visible */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-hover);
+}
