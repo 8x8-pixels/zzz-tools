@@ -1,7 +1,8 @@
-﻿<script lang="ts">
+<script lang="ts">
   import { onMount, onDestroy } from 'svelte';
   import { listen } from '@tauri-apps/api/event';
   import { invoke } from '@tauri-apps/api/core';
+  import { availableMonitors, type Monitor } from '@tauri-apps/api/window';
   import { open } from '@tauri-apps/plugin-dialog';
   import { loadSettings, saveSettings, type AppSettings } from '../lib/settings';
   import { saveJsonFile, saveJsonToDiscsDir } from '../lib/tauri';
@@ -9,12 +10,15 @@
   let running = false;
   let captured: any[] = [];
   let monitorNum = 0;
+  let monitors: Monitor[] = [];
 
   let settings: AppSettings = { tesseractDir: '' };
   let tesseractDir = '';
   let statusMsg = '';
   let errorMsg = '';
   let lastSavedPath = '';
+  let duplicateIndexes = new Set<number>();
+  let duplicateCount = 0;
 
   let unlistenCaptured: (() => void) | null = null;
   let unlistenStopped: (() => void) | null = null;
@@ -41,15 +45,60 @@
     return `${mainSig}::${subsSig}`;
   }
 
+  function syncSeenSigs() {
+    seenCaptureSigs = new Set(captured.map((disc) => makeDiscSignature(disc)));
+  }
+
+  function makeDuplicateIndexSet(list: any[]): Set<number> {
+    const seen = new Map<string, number>();
+    const duplicates = new Set<number>();
+    list.forEach((disc, index) => {
+      const sig = makeDiscSignature(disc);
+      const first = seen.get(sig);
+      if (first === undefined) {
+        seen.set(sig, index);
+        return;
+      }
+      duplicates.add(first);
+      duplicates.add(index);
+    });
+    return duplicates;
+  }
+
+  $: duplicateIndexes = makeDuplicateIndexSet(captured);
+  $: duplicateCount = duplicateIndexes.size;
+
+  function monitorLabel(monitor: Monitor, index: number): string {
+    const size = monitor.size;
+    const pos = monitor.position;
+    const primaryTag = monitor === monitors[0] ? '' : '';
+    return `${index}: ${monitor.name ?? 'Monitor'} (${size.width}x${size.height} @ ${pos.x},${pos.y})${primaryTag}`;
+  }
+
+  async function loadMonitorList() {
+    try {
+      monitors = await availableMonitors();
+    } catch {
+      monitors = [];
+    }
+  }
+
+  function setStatus(msg: string) {
+    statusMsg = msg;
+    setTimeout(() => {
+      if (statusMsg === msg) statusMsg = '';
+    }, 2000);
+  }
+
   onMount(async () => {
     settings = await loadSettings();
     tesseractDir = settings.tesseractDir ?? '';
+    await loadMonitorList();
     try {
       running = await invoke<boolean>('is_ocr_running');
     } catch {
       running = false;
     }
-
     unlistenCaptured = await listen<string>('disc-captured', (event) => {
       if (!running) return;
       const line = String(event.payload ?? '').trim();
@@ -80,8 +129,7 @@
     try {
       settings = { ...settings, tesseractDir };
       await saveSettings(settings);
-      statusMsg = 'Settings saved.';
-      setTimeout(() => (statusMsg = ''), 2000);
+      setStatus('Settings saved.');
     } catch (err) {
       errorMsg = `Settings save failed: ${String(err)}`;
     }
@@ -137,13 +185,41 @@
     const fileName = `discs_${stamp}.json`;
     const path = await saveJsonToDiscsDir(fileName, JSON.stringify(captured, null, 2));
     lastSavedPath = path;
-    statusMsg = 'Saved to app data.';
-    setTimeout(() => (statusMsg = ''), 2000);
+    setStatus('Saved to app data.');
   }
 
   function clearCaptured() {
     captured = [];
     seenCaptureSigs = new Set();
+  }
+
+  function removeDiscAt(index: number) {
+    captured = captured.filter((_, i) => i !== index);
+    syncSeenSigs();
+  }
+
+  function removeDuplicates() {
+    if (captured.length === 0) return;
+    const seen = new Set<string>();
+    const next: any[] = [];
+    let removed = 0;
+    for (const disc of captured) {
+      const sig = makeDiscSignature(disc);
+      if (seen.has(sig)) {
+        removed += 1;
+        continue;
+      }
+      seen.add(sig);
+      next.push(disc);
+    }
+    captured = next;
+    syncSeenSigs();
+    setStatus(removed > 0 ? `Removed ${removed} duplicate disc(s).` : 'No duplicates found.');
+  }
+
+  function handleMonitorSelect(event: Event) {
+    const value = Number((event.target as HTMLSelectElement).value);
+    monitorNum = Number.isFinite(value) ? value : 0;
   }
 </script>
 
@@ -182,7 +258,15 @@
 
     <div class="field">
       <label>Monitor Number</label>
-      <input type="number" min="0" bind:value={monitorNum} />
+      {#if monitors.length > 0}
+        <select class="monitor-select" value={monitorNum} on:change={handleMonitorSelect}>
+          {#each monitors as monitor, idx}
+            <option value={idx}>{monitorLabel(monitor, idx)}</option>
+          {/each}
+        </select>
+      {:else}
+        <input type="number" min="0" bind:value={monitorNum} />
+      {/if}
       <p class="hint">0 = primary monitor</p>
     </div>
   </section>
@@ -193,6 +277,9 @@
     <button class="btn" on:click={exportDiscs} disabled={captured.length === 0}>💾 保存</button>
     <button class="btn" on:click={saveToAppData} disabled={captured.length === 0}>
       📂 アプリデータへ保存
+    </button>
+    <button class="btn" on:click={removeDuplicates} disabled={captured.length === 0}>
+      重複削除{duplicateCount > 0 ? ` (${duplicateCount})` : ''}
     </button>
     <button class="btn ghost" on:click={clearCaptured} disabled={captured.length === 0}>
       クリア
@@ -206,11 +293,11 @@
   <section class="disc-list">
     <div class="disc-header">
       <h3>Captured Discs</h3>
-      <span class="count">{captured.length} 枚</span>
+      <span class="count">{captured.length} 枚 / 重複候補 {duplicateCount}</span>
     </div>
     <div class="disc-grid">
-      {#each captured as disc}
-        <div class="disc-card">
+      {#each captured as disc, i}
+        <div class="disc-card" class:duplicate={duplicateIndexes.has(i)}>
           <div class="disc-title">
             <span class="slot">Slot {disc.slot ?? '?'}</span>
             <span class="name">{disc.name ?? 'Unknown'}</span>
@@ -230,6 +317,12 @@
             {:else}
               <span class="muted">sub stats: n/a</span>
             {/if}
+          </div>
+          <div class="disc-actions">
+            {#if duplicateIndexes.has(i)}
+              <span class="dup-badge">duplicate?</span>
+            {/if}
+            <button class="mini-btn" on:click={() => removeDiscAt(i)}>削除</button>
           </div>
         </div>
       {/each}
@@ -313,7 +406,8 @@
   }
 
   input[type="text"],
-  input[type="number"] {
+  input[type="number"],
+  .monitor-select {
     background: var(--surface-2);
     color: var(--text);
     border: 1px solid var(--border);
@@ -415,6 +509,11 @@
     gap: 6px;
   }
 
+  .disc-card.duplicate {
+    border-color: rgba(255, 184, 77, 0.55);
+    box-shadow: inset 0 0 0 1px rgba(255, 184, 77, 0.2);
+  }
+
   .disc-title {
     display: flex;
     justify-content: space-between;
@@ -440,6 +539,35 @@
     gap: 6px;
     font-size: 0.74rem;
     color: var(--text-secondary);
+  }
+
+  .disc-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-top: 2px;
+  }
+
+  .dup-badge {
+    font-size: 0.7rem;
+    color: #ffbf6b;
+  }
+
+  .mini-btn {
+    margin-left: auto;
+    background: transparent;
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 4px 8px;
+    font-size: 0.72rem;
+  }
+
+  .mini-btn:hover {
+    color: var(--text);
+    border-color: var(--border-hover);
+    background: var(--surface-3);
   }
 
   .muted {

@@ -22,17 +22,41 @@ import cv2
 import numpy as np
 import difflib
 
+
+def safe_print(*args, **kwargs):
+    """Best-effort print that won't crash on cp932 / invalid stream edge cases."""
+    try:
+        print(*args, **kwargs)
+        return
+    except (UnicodeEncodeError, OSError, ValueError):
+        pass
+
+    file = kwargs.get("file", sys.stdout)
+    sep = kwargs.get("sep", " ")
+    end = kwargs.get("end", "\n")
+    flush = kwargs.get("flush", False)
+    text = sep.join(str(a) for a in args) + end
+
+    try:
+        enc = getattr(file, "encoding", None) or "utf-8"
+        file.write(text.encode(enc, errors="replace").decode(enc, errors="replace"))
+        if flush:
+            file.flush()
+    except Exception:
+        # Last resort: drop the log line instead of crashing OCR capture.
+        pass
+
 try:
     import mss
 except ImportError:
-    print("Error: mss is required. Install with: pip install mss")
+    safe_print("Error: mss is required. Install with: pip install mss")
     sys.exit(1)
 
 try:
     import pytesseract
 except ImportError:
     pytesseract = None
-    print("Warning: pytesseract not found. OCR will be disabled.")
+    safe_print("Warning: pytesseract not found. OCR will be disabled.")
 
 import tkinter as tk
 import queue
@@ -111,7 +135,12 @@ class OverlayNotifier:
 
 def emit_disc(disc: dict):
     """Emit a single disc as JSON line to stdout."""
-    print(json.dumps(disc, ensure_ascii=False), flush=True)
+    try:
+        # ASCII-only JSON avoids Windows cp932 encode issues while remaining valid JSON.
+        sys.stdout.write(json.dumps(disc, ensure_ascii=True) + "\n")
+        sys.stdout.flush()
+    except Exception as e:
+        safe_print(f"[emit_disc warning] {e}", file=sys.stderr)
 
 # ─────────────────────────────────────────────
 # Known Data
@@ -662,12 +691,15 @@ class LiveDiscScanner:
                     subs = len(parsed_data.get('sub_stats', []))
                     main = parsed_data.get('main_stat', {})
                     main_str = f"{main.get('name', '?')} {main.get('value', '?')}" if main else '?'
-                    print(f"  [#{self.disc_counter}] {name} | {subs} sub-stats | total: {len(self.results)}")
+                    safe_print(f"  [#{self.disc_counter}] {name} | {subs} sub-stats | total: {len(self.results)}")
                     
                     # Overlay notification (non-blocking)
+                    # Avoid showing a running serial number here because users can delete entries
+                    # in the native app UI, which makes sidecar-local counters diverge from the visible list.
                     sub_names = ', '.join(s['name'] for s in parsed_data.get('sub_stats', []))
+                    slot = parsed_data.get('slot', '?')
                     self.overlay.show(
-                        f"Disc #{self.disc_counter}: {name}",
+                        f"Captured: {name} (Slot {slot})",
                         f"Main: {main_str} | Subs: {sub_names}"
                     )
 
@@ -676,7 +708,7 @@ class LiveDiscScanner:
                     
                     return True
                 else:
-                    print(f"  (skipped - no sub-stats detected)")
+                    safe_print(f"  (skipped - no sub-stats detected)")
 
         return False
 

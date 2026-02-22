@@ -1,11 +1,17 @@
-﻿import { open, save } from '@tauri-apps/plugin-dialog';
-import { readTextFile, writeTextFile, readDir, mkdir, exists } from '@tauri-apps/plugin-fs';
-import { appDataDir, join } from '@tauri-apps/api/path';
+import { open, save } from '@tauri-apps/plugin-dialog';
+import { readTextFile, writeTextFile, readDir, readFile, mkdir, exists } from '@tauri-apps/plugin-fs';
+import { appDataDir, appLocalDataDir, join } from '@tauri-apps/api/path';
 
 export type OpenedJsonFile = {
   path: string;
   name: string;
   content: string;
+};
+
+export type OcrPanelImage = {
+  path: string;
+  name: string;
+  bytes: Uint8Array;
 };
 
 export async function openJsonFile(): Promise<OpenedJsonFile | null> {
@@ -61,9 +67,10 @@ export async function loadDiscsDir(): Promise<OpenedJsonFile[]> {
   const entries = await readDir(dir);
   const jsons: OpenedJsonFile[] = [];
   for (const entry of entries) {
-    if (!entry.name || !entry.name.endsWith('.json') || !entry.path) continue;
-    const content = await readTextFile(entry.path);
-    jsons.push({ path: entry.path, name: entry.name, content });
+    if (!entry.name || !entry.name.endsWith('.json') || entry.isDirectory) continue;
+    const path = await join(dir, entry.name);
+    const content = await readTextFile(path);
+    jsons.push({ path, name: entry.name, content });
   }
   return jsons;
 }
@@ -73,4 +80,31 @@ export async function saveJsonToDiscsDir(fileName: string, content: string): Pro
   const path = await join(dir, fileName);
   await writeTextFile(path, content);
   return path;
+}
+
+export async function getOcrPanelsDir(): Promise<string> {
+  const base = await appLocalDataDir();
+  const dir = await join(base, 'ocr_live', 'panels');
+  if (!(await exists(dir))) {
+    return dir;
+  }
+  return dir;
+}
+
+export async function loadLatestOcrPanel(): Promise<OcrPanelImage | null> {
+  const dir = await getOcrPanelsDir();
+  if (!(await exists(dir))) return null;
+
+  const entries = await readDir(dir);
+  const pngNames = entries
+    .filter((entry) => entry.isFile && !!entry.name && entry.name.toLowerCase().endsWith('.png'))
+    .map((entry) => entry.name as string)
+    .sort();
+
+  const latestName = pngNames[pngNames.length - 1];
+  if (!latestName) return null;
+
+  const path = await join(dir, latestName);
+  const bytes = await readFile(path);
+  return { path, name: latestName, bytes };
 }
