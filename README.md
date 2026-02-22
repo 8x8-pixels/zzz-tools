@@ -1,12 +1,14 @@
 # zzz-tools
 
 ゼンレスゾーンゼロ（ZZZ）向けのツール群です。  
-ディスクデータの収集・エフェクト定義の作成・ダメージ最適化を、3つのツールで分担しています。
+ディスクデータの収集・エフェクト定義の作成・ダメージ最適化を行うツール群です。  
+現在は **Tauri 製の統合アプリ `native-app`** を追加しており、OCR / Effect Editor / Optimizer を1つのアプリで利用できます。
 ダメ計周りはこちらを参照しています
 https://github.com/zzz-tools/cd-status-optimizer
 
 ```
 zzz-tools/
+├── native-app/         ← Tauri製の統合ネイティブアプリ（推奨）
 ├── zzz-disc-db/        ← OCRでゲーム画面からディスクをJSONに変換
 ├── zzz-effect-tool/    ← ダメージ計算に使う各要素のJSONを作成するGUIツール
 └── zzz-optimizer/      ← ダメージ計算 & ディスク組み合わせの最適化
@@ -15,6 +17,50 @@ zzz-tools/
 ---
 
 ## ツール概要
+
+### 0. native-app（推奨）
+
+`native-app` は以下の3機能を統合した Windows 向けネイティブアプリです。
+
+- `Disc OCR`（ディスクOCRキャプチャ）
+- `Effect Editor`（Effect JSON編集）
+- `Optimizer`（ディスク最適化）
+
+**技術スタック:** Tauri v2 / Rust / Svelte / TypeScript  
+
+**特徴:**
+- 3ツールを1つのUIで切り替えて利用可能
+- `Disc OCR` の結果をアプリデータへ保存し、`Optimizer` から直接読み込み可能
+- Tesseract OCR は別途インストールし、アプリの設定UIでインストールフォルダを指定
+
+**前提（Disc OCR）:**
+- ゲーム内言語は英語推奨（OCR精度のため）
+- 監視対象モニタを `Monitor Number` で選択
+- できるだけフルスクリーン / ボーダーレス表示推奨
+
+**セットアップ（開発）:**
+
+```bash
+cd native-app
+npm install
+npm run tauri:dev
+```
+
+**配布ビルド:**
+
+```bash
+cd native-app
+npm run tauri:build
+```
+
+**Tesseract OCR について:**
+- Tesseract は別途インストールが必要です（`eng` 言語データを含める）
+- アプリの `Disc OCR > OCR SETTINGS` でインストールディレクトリを指定してください
+
+**アプリデータ保存先（Windows）:**
+- `%APPDATA%\\dev.zzz-tools\\discs`
+
+---
 
 ### 1. zzz-disc-db
 
@@ -139,6 +185,19 @@ data/discs/
 ---
 
 ## 典型的なワークフロー
+
+### A. native-app を使う（推奨）
+
+```
+1. native-app を起動
+2. Disc OCR タブで Tesseract のインストールフォルダを設定
+3. OCR 開始 → ディスクを確認しながらキャプチャ
+4. 「アプリデータへ保存」
+5. Optimizer タブでアプリデータから読み込み → 最適化
+6. 必要なら Effect Editor タブで JSON を編集 / Export
+```
+
+### B. 従来の個別ツールを使う
 
 ```
 1. zzz-disc-db
